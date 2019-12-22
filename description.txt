@@ -1,0 +1,24 @@
+The IC LM358 is configured as a comparator. The IC LM741 is not used since it is not specified to work 
+with voltages lower than 4.5V. Pin#2 which is the inverting input of the IC is used as the sensing pin 
+and is attached with a preset for the required adjustments and setting. Pin#3 which is the non-inverting 
+input of the opamps is reference at 3V by clamping it with a 3V zener diode. A couple of LEDs can be 
+seen wired across the output pin of the opamp, for detecting and indicating the charging condition of 
+the circuit. Green LED indicates the battery is being charged while the red illuminates as soon as the 
+battery is fully charged, and supply is cut off to the battery. Please remember that the charging process 
+can be quite slow and may take many hours, because the current from USB of a computer is normally very 
+low and may range between 200mA to 500mA depending on which number port is used for the purpose. Once the 
+circuit is assembled and set up, the below shown design can be used for charging any spare Li-Ion Battery 
+through the USB port. First connect the battery across the indicated points, and then plug in the USB con-
+-nector with your computer's USB socket. The green LED should instant become ON indicating the battery is 
+being charged. You can attach a voltmeter across the battery to monitor its charging, and check whether the 
+circuit cuts off the supply correctly or not at the specified limit. 
+1. First, make sure the preset is moved at the ground side fully. Meaning, the pin#2 should be at ground 
+   level through the preset initially.
+2. Next, without any battery connected, apply an exact 4.2 V across the +/- supply lines of the circuit, 
+   through an accurate adjustable power supply.
+3. You will see the green LED coming ON instantly.
+4. Now, slowly rotate the preset, until the green LED just shuts OFF, and the RED LED switches ON.
+5. That's all! The circuit is now all set to cut off at 4.2 V when the actual Li-Ion cell reaches this level.
+6. For the final testing, connect a discharged battery to the shown position, plug-in the input power through 
+   a computer USB socket, and have fun watching the cell getting charged and cut-off at the stipulated 4.2 V 
+   threshold.
